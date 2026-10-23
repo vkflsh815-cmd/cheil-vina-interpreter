@@ -1,24 +1,51 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>CHEIL VINA 통역 V1.6 마이크 시험</title>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>CHEIL VINA 통역 V1.7</title>
 <style>
-:root{font-family:system-ui,-apple-system,'Noto Sans KR',sans-serif;color:#142033;background:#eef2f6}*{box-sizing:border-box}body{margin:0}.app{max-width:520px;margin:0 auto;background:white;min-height:100dvh;padding:18px 16px max(16px,env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:12px}.pane{border:2px solid #253750;border-radius:24px;padding:13px 15px;min-height:0}.api{flex:none;border-radius:18px}.field-title{font-weight:750;font-size:15px;margin:0 0 8px}.api-row{display:flex;gap:9px;align-items:stretch}.api-row input{flex:1;min-width:0;width:0}.voice-toggle{flex:none;min-height:42px;padding:8px 12px;font-size:14px;border-radius:9px;white-space:nowrap;background:#e7f0ff}.api input{width:100%;font-size:16px;padding:10px;border:1px solid #a8b4c3;border-radius:9px}.translation{flex:1.05;min-height:150px;display:flex;flex-direction:column}.input-pane{flex:1;min-height:150px;display:flex;flex-direction:column}.content{font-size:18px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto;flex:1}.input-pane textarea{width:100%;height:100%;min-height:100px;flex:1;resize:none;border:0;outline:none;font:inherit;font-size:18px;line-height:1.5;background:transparent;color:inherit}.footer{flex:none;display:flex;flex-direction:column;gap:9px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:9px}button{border:2px solid #253750;background:#f6f8fc;color:#142033;border-radius:12px;font-weight:750;font-size:16px;min-height:58px;padding:10px 7px;cursor:pointer}button:disabled{opacity:.36;cursor:default}.main-action{background:#d9e9ff}.recording{background:#ffe0dd;border-color:#aa423b}.status{font-size:12px;min-height:17px;color:#48637e;line-height:1.4}.usage{font-size:12px;color:#43556a;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.brand{text-align:right;font-size:13px;letter-spacing:.1px;font-weight:650;margin-top:1px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}@media(min-width:600px){.app{min-height:92dvh;margin:4dvh auto;border:3px solid #253750;border-radius:35px;max-height:950px}}@media(max-height:670px){.app{gap:8px;padding-top:9px}.translation,.input-pane{min-height:100px}.pane{padding:9px 12px}button{min-height:48px}.footer{gap:6px}}
+:root{font-family:system-ui,-apple-system,'Noto Sans KR',sans-serif;color:#142033;background:#eef2f6}*{box-sizing:border-box}body{margin:0}.app{max-width:520px;margin:0 auto;background:white;min-height:100dvh;padding:18px 16px max(16px,env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:12px}.pane{border:2px solid #253750;border-radius:24px;padding:13px 15px;min-height:0}.api{flex:none;border-radius:18px}.field-title{font-weight:750;font-size:15px;margin:0 0 8px}.api-row{display:flex;gap:9px;align-items:stretch}.api-row input{flex:1;min-width:0;width:0}.voice-toggle{flex:none;min-height:42px;padding:8px 12px;font-size:14px;border-radius:9px;white-space:nowrap;background:#e7f0ff}.api input{width:100%;font-size:16px;padding:10px;border:1px solid #a8b4c3;border-radius:9px}.translation{flex:1.05;min-height:150px;display:flex;flex-direction:column}.input-pane{flex:1;min-height:150px;display:flex;flex-direction:column}.content{font-size:18px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto;flex:1}.input-pane textarea{width:100%;height:100%;min-height:100px;flex:1;resize:none;border:0;outline:none;font:inherit;font-size:18px;line-height:1.5;background:transparent;color:inherit}.footer{flex:none;display:flex;flex-direction:column;gap:9px}.controls{display:grid;gap:9px}.controls-top{grid-template-columns:1.05fr .95fr 1.85fr}.controls-bottom{grid-template-columns:1fr 1fr}.controls-top button{font-size:clamp(11px,3.3vw,16px);padding:7px 3px}.controls-top #auto{font-size:clamp(10px,2.9vw,13px);line-height:1.35;background:#e7f0ff}.controls-top #auto span{font-weight:850;color:#1769b7}.controls-top #auto.auto-off{background:#f6f8fc}.controls-top #auto.auto-off span{color:#667085}.controls-top #translate.stopping{background:#ffe0dd;border-color:#aa423b}button{border:2px solid #253750;background:#f6f8fc;color:#142033;border-radius:12px;font-weight:750;font-size:16px;min-height:58px;padding:10px 7px;cursor:pointer}button:disabled{opacity:.36;cursor:default}.main-action{background:#d9e9ff}.recording{background:#ffe0dd;border-color:#aa423b}.status{font-size:12px;min-height:17px;color:#48637e;line-height:1.4}.usage{font-size:12px;color:#43556a;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.brand{text-align:right;font-size:13px;letter-spacing:.1px;font-weight:650;margin-top:1px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}@media(min-width:600px){.app{min-height:92dvh;margin:4dvh auto;border:3px solid #253750;border-radius:35px;max-height:950px}}@media(max-height:670px){.app{gap:8px;padding-top:9px}.translation,.input-pane{min-height:100px}.pane{padding:9px 12px}button{min-height:48px}.footer{gap:6px}}
 </style></head><body><main class="app">
-<section class="pane api"><label class="field-title" for="key">API 입력 칸</label><div class="api-row"><input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-..." aria-label="OpenAI API 키"><button id="voiceMode" class="voice-toggle" type="button" aria-label="음성 출력 방식 선택" title="눌러서 API 음성과 휴대폰 음성을 전환">음성: API</button></div></section>
+<section class="pane api"><label class="field-title" for="key">API 입력 칸</label><div class="api-row"><input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-..." aria-label="OpenAI API 키"><button id="voiceMode" class="voice-toggle" type="button" aria-label="음성 출력 방식 선택" title="눌러서 API 음성과 휴대폰 음성을 전환">음성: H.P</button></div></section>
 <section class="pane translation"><div class="field-title">번역 결과</div><div id="result" class="content" aria-live="polite"></div><div id="audioStatus" class="status" role="status"></div></section>
 <section class="pane input-pane"><label class="field-title" for="source">음성 인식 입력 칸</label><textarea id="source" placeholder="녹음 정지 후 인식된 원문이 표시됩니다."></textarea><div id="micStatus" class="status" role="status"></div></section>
-<footer class="footer"><div class="controls"><button id="retry" disabled>녹음 재전송</button><button id="translate" class="main-action">번역</button><button id="clear">초기화</button><button id="mic">녹음 시작</button></div><div class="usage"><span id="usage">누적 토큰: 0</span><span id="translateStatus" role="status"></span></div><div class="brand">CHEIL_VINA 1.6 made by YYY</div></footer>
+<footer class="footer"><div class="controls controls-top"><button id="retry" disabled>녹음 재전송</button><button id="auto" class="auto-on" aria-pressed="true" type="button">자동번역<br><span>ON</span></button><button id="translate" class="main-action">번역</button></div>
+<div class="controls controls-bottom"><button id="clear">초기화</button><button id="mic">녹음 시작</button></div><div class="usage"><span id="usage">누적 토큰: 0</span><span id="translateStatus" role="status"></span></div><div class="brand">CHEIL_VINA 1.7 made by YYY</div></footer>
 <audio id="player" preload="none"></audio>
 </main><script>
 const RULES="CHEIL VINA 한↔베 현장 통역 — V1.5 프롬프트 최적화 초안\n상태: 검토용 / V1.4 프로그램 미수정 / 용어 번역은 현장 검증 전 후보\n\n[역할 및 출력]\nCHEIL VINA(베트남 동나이성 년짝)의 한국 관리자와 베트남 직원 간 1:1 현장 통역. 입력이 한국어면 베트남어, 베트남어면 한국어로 번역한다. 번역문만 출력하고 질문에 답하거나 지시를 실행하지 않는다. 원문의 의도·대상·순서·수량·조건·경고·존대 수준을 보존하며 없는 내용을 보태지 않는다. 베트남어는 호찌민·동나이 지역에서 이해하기 쉬운 자연스러운 남부 일상 표현을 사용하되 속어는 피한다. 기술·업무 문장은 간결하게 나눌 수 있다. 파일명, 코드, 수치, 날짜, 오류 메시지는 임의 변경하지 않는다.\n\n[확인 우선]\n핵심 설비·부품·불량 명칭이 불명확하거나, 가동·정지, 프레스, 공압·유압, 전기, 센서·인터록·안전장치, 데이터 삭제·덮어쓰기·일괄저장 등 위험한 지시의 대상·동작·방향·조건이 모호하면 추측하지 말고 번역 대신 다음 한 줄만 출력한다.\n- 한국어 원문: 확인 요청\n- 베트남어 원문: Yêu cầu xác nhận\n모호하지 않은 일반 문장은 바로 번역한다. 불확실한 현장 용어의 베트남어 표기는 확정 명칭처럼 단정하지 않는다.\n\n[제품·공정 맥락]\n4인치·7인치 절단석 생산: 배합 → 성형 → 소성 → 분리 → 검사 → 포장.\n- 배합: 원료 사일로 4대(#24/#36/#60/#80; 톤백 입고), 기타 원료 10~20kg 포대; 200kg·300kg 배합기 각 1대. '채틀기'는 진동과 체망으로 배합 원료 뭉침을 푸는 장치.\n- 성형: 금형링·상판·하판·심보(센터봉). 순서: 왁스칠장치(스펀지로 이형제 도포) → 망압장치(공압·유압으로 하판 누름 및 위치 확인) → 원료투입(피더) → 고름장치(원료 평탄화) → G/F 투입(Glass Fiber 유리섬유 보강망) → 흑지화이바(흑지가 붙은 G/F) → 흑지상표 → 붓쉬(절단석 내경의 납작한 금속 보강링) → 상판 덮기 → 메인 프레스 → 제품 취출 → 발란스(중량 및 정적 밸런스 검사; 동적 밸런스 아님). 구동: 서보모터, 에어실린더, 일부 유압실린더, 전진·후진·상승·하강 위치 센서, 지그 감지 센서.\n- 소성: 수판(제품 변형 방지용 철판) 사이에 제품 적층, 꼬질대(중심 정렬봉), 너트·스프링으로 고정, 컨테이너(적층 묶음 운반용 철재 틀)에 실어 전기로에서 약 175℃ 경화.\n- 분리: 소성 제품과 수판 분리; 수판 재사용, 제품 검사·포장 이송.\n- 검사: 중량, 정적 발란스, 외관, 상표, 붓쉬, 크랙, 내경, 뺀질이, G/F 보임. '뺀질이'는 표면이 비정상적으로 매끄럽거나 번들거리는 것으로 추정되는 현장 불량명이며 정확한 형태 미확정. G/F 보임=제품 표면에 유리섬유망 노출.\n- 포장: LOT.NO 표시 후 박스 포장.\n\n[Y-ERP 맥락 및 용어]\nY-ERP는 CHEIL VINA의 Excel 기반 관리 시스템(웹 ERP 아님). 수주·생산·원부재료/수입·수출/출고 문서 관리. Excel 파일 저장, 임시 목록 추가, DB 최종 저장, DB 새로고침은 서로 다르다. 교육 중에는 실제 화면의 버튼 이름과 상태를 기준으로 번역하고, 내부 컨트롤명(CMD1/CMD3 등)을 화면 표시명으로 단정하지 않는다. 저장했다고 말해도 DB 반영이 검증됐다고 확대 해석하지 않는다. 테스트 데이터와 실제 데이터, 직원의 추측과 확인된 오류 원인을 구별한다.\n- Y-ERP=Y-ERP; 수주=đơn đặt hàng/tiếp nhận đơn hàng; 수주등록=nhập đơn đặt hàng; 주문번호=mã đơn hàng; 프로젝트번호=mã dự án; 제품코드=mã sản phẩm; 주문날짜=ngày đặt hàng; 납기날짜=ngày giao hàng dự kiến/hạn giao hàng; 수량=số lượng; 단위=đơn vị tính; 단가=đơn giá; 총계=tổng tiền/tổng cộng.\n- 생산계획=kế hoạch sản xuất; 생산실적=sản lượng thực tế/kết quả sản xuất; 생산일지=nhật ký sản xuất; 원부재료=nguyên vật liệu; 재고=tồn kho; 재고조회=tra cứu tồn kho; 수입대기=hàng nhập đang chờ về/chờ nhập kho(문맥 확인); 수입관리=quản lý nhập khẩu(해외 수입일 때); 수출관리=quản lý xuất khẩu; 출고=xuất kho; 출고의뢰서=phiếu yêu cầu xuất kho; 통관의뢰서=hồ sơ/yêu cầu làm thủ tục hải quan(실제 문서 용도 확인); Shipping Marks=shipping marks/ký mã hiệu hàng hóa; LOT.NO=mã lô/số lô.\n- 입력=nhập dữ liệu; 조회=tra cứu; 검색=tìm kiếm; 선택=chọn; 수정=chỉnh sửa; 삭제=xóa; 임시 저장=lưu tạm; 저장=lưu; DB 등록=ghi vào cơ sở dữ liệu/lưu vào dữ liệu chung; 새로고침=làm mới dữ liệu/cập nhật dữ liệu; 중복 등록=nhập trùng/đăng ký trùng; 오류 메시지=thông báo lỗi; 필수 입력=thông tin bắt buộc; 파일 사용 중=tệp đang được sử dụng; 관리자용=dành cho người quản lý; 직원용=dành cho nhân viên; 테스트/시운전=chạy thử/kiểm tra thử; 백업=sao lưu.\n이 베트남어 대응어는 현장 확정 명칭이 아니라 문맥에 따른 번역 후보이다. 주문번호·프로젝트번호·제품코드는 서로 다른 필드이며 혼용하지 않는다. 오류코드·셀 주소·숫자·날짜·파일명은 그대로 보존한다.\n\n[웹앱 운영]\n이 프롬프트는 HTML 번역 API 호출용이다. 통역시작/통역정지 명령 및 대화창 상태 관리 규칙은 사용하지 않는다. 번역 외 설명·분석·안내를 출력하지 않는다.\n";
 
 const $=id=>document.getElementById(id);
 let recorder=null,stream=null,chunks=[],recording=false,recordedBlob=null,recordedType='',busy=false,requestController=null;
-let last='',language='vi',audioURL=null,usageTotal=0,voiceMode='api',speechSeq=0;
+let last='',language='vi',audioURL=null,usageTotal=0,voiceMode='phone',speechSeq=0;
+let autoTranslate=true,phase='idle',jobId=0,playbackPending=false;
 const status=(id,s)=>$(id).textContent=s;
 function apiKey(){const k=$('key').value.trim();if(!k)throw Error('API 키를 입력하세요.');return k}
 function friendly(e){if(e?.name==='AbortError')return '응답 시간이 초과되었습니다. 녹음 재전송을 눌러 다시 시도하세요.';if(e instanceof TypeError)return '네트워크 연결을 확인하세요: '+e.message;return e?.message||String(e)}
 function countUsage(data){const u=data?.usage;if(!u)return;const n=u.total_tokens??((u.input_tokens??u.prompt_tokens??0)+(u.output_tokens??u.completion_tokens??0));if(Number.isFinite(n)&&n>0){usageTotal+=n;$('usage').textContent='누적 토큰: '+usageTotal.toLocaleString('ko-KR')}}
-function setBusy(b){busy=b;$('translate').disabled=b||recording;$('mic').disabled=b;$('retry').disabled=b||recording||!recordedBlob;$('clear').disabled=b}
+function syncControls(){
+ busy=(phase==='transcribing'||phase==='translating'||phase==='preparing');
+ $('translate').textContent=(phase==='translating'||phase==='preparing'||phase==='playing')?'중지':'번역';
+ $('translate').classList.toggle('stopping',phase==='translating'||phase==='preparing'||phase==='playing');
+ $('translate').disabled=recording||phase==='transcribing';
+ $('mic').disabled=busy||phase==='playing';
+ $('retry').disabled=busy||phase==='playing'||recording||!recordedBlob;
+ $('clear').disabled=busy||phase==='playing';
+ $('auto').disabled=recording||busy||phase==='playing';
+}
+function setBusy(b){phase=b?'transcribing':'idle';syncControls()}
+function finishAudio(seq,success,message){
+ if(seq!==speechSeq)return;
+ playbackPending=false;phase='idle';
+ if(success)$('source').value='';
+ status('audioStatus',message);syncControls();
+}
+function stopTranslation(){
+ jobId++;
+ requestController?.abort();
+ clearAudio();
+ phase='idle';playbackPending=false;
+ status('translateStatus','중지됨 — 원문을 수정한 뒤 다시 번역할 수 있습니다.');
+ status('audioStatus','음성 중지됨');
+ syncControls();
+}
 async function request(path,options={},timeout=25000,responseType='json'){
  const controller=new AbortController();requestController=controller;const timer=setTimeout(()=>controller.abort(),timeout);
  try{const r=await fetch('https://api.openai.com/v1/'+path,{...options,signal:controller.signal,headers:{Authorization:'Bearer '+apiKey(),...(options.headers||{})}});
@@ -34,9 +61,9 @@ async function transcribe(){if(!recordedBlob)return;setBusy(true);status('micSta
  const j=await request('audio/transcriptions',{method:'POST',body:f},25000);
  countUsage(j);if(!j.text?.trim())throw Error('인식 결과가 비어 있습니다.');
  $('source').value+=($('source').value.trim()?'\n':'')+j.text.trim();recordedBlob=null;chunks=[];
- status('micStatus','인식 완료. 원문 확인 후 번역하세요.');
+ status('micStatus',autoTranslate?'인식 완료. 자동 번역을 시작합니다.':'인식 완료. 원문 확인 후 번역하세요.');
  }catch(e){status('micStatus','인식 실패: '+friendly(e)+' 녹음이 남아 있다면 재전송할 수 있습니다.')}
- finally{setBusy(false);refreshRetry()}}
+ finally{setBusy(false);refreshRetry();if(autoTranslate&&$('source').value.trim()&&$('micStatus').textContent.startsWith('인식 완료'))startTranslation()}}
 $('mic').onclick=async()=>{
  if(recording){$('mic').disabled=true;recorder.stop();return}
  try{apiKey();if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder)throw Error('HTTPS 및 마이크 지원 브라우저가 필요합니다.');
@@ -70,34 +97,85 @@ $('mic').onclick=async()=>{
  }catch(e){status('micStatus','녹음 오류: '+friendly(e));stream?.getTracks().forEach(t=>t.stop());stream=null}
 };
 $('retry').onclick=()=>{if(recordedBlob&&!busy&&!recording)transcribe()};
-function clearAudio(){speechSeq++;if('speechSynthesis' in window)window.speechSynthesis.cancel();const p=$('player');p.pause();p.removeAttribute('src');p.load();if(audioURL){URL.revokeObjectURL(audioURL);audioURL=null}}
+function clearAudio(){
+ speechSeq++;
+ if('speechSynthesis' in window)window.speechSynthesis.cancel();
+ const p=$('player');p.pause();p.removeAttribute('src');p.load();
+ if(audioURL){URL.revokeObjectURL(audioURL);audioURL=null}
+}
 function speakPhone(text,lang){
  clearAudio();const seq=speechSeq;
- if(!('speechSynthesis' in window)){status('audioStatus','이 브라우저는 휴대폰 음성 출력을 지원하지 않습니다.');return}
+ if(!('speechSynthesis' in window)){finishAudio(seq,false,'휴대폰 음성 출력을 지원하지 않습니다.');return}
  const u=new SpeechSynthesisUtterance(text);u.lang=lang==='vi'?'vi-VN':'ko-KR';u.rate=1;u.pitch=1;
  const voices=window.speechSynthesis.getVoices();const matches=voices.filter(v=>v.lang.toLowerCase().startsWith(lang==='vi'?'vi':'ko'));
  if(matches.length)u.voice=matches.find(v=>v.localService)||matches[0];
  u.onstart=()=>{if(seq===speechSeq)status('audioStatus','휴대폰 음성 재생 중…')};
- u.onend=()=>{if(seq===speechSeq)status('audioStatus','재생 완료 (번역 결과를 누르면 다시 듣기)')};
- u.onerror=e=>{if(seq===speechSeq&&e.error!=='canceled')status('audioStatus','휴대폰 음성 오류: '+e.error+' (언어 음성팩을 확인하세요.)')};
- window.speechSynthesis.speak(u);
- status('audioStatus','휴대폰 음성 재생 준비 중…');
+ u.onend=()=>finishAudio(seq,true,'재생 완료 (번역 결과를 누르면 다시 듣기)');
+ u.onerror=e=>{if(seq===speechSeq)finishAudio(seq,false,e.error==='canceled'?'재생 중지됨':'휴대폰 음성 오류: '+e.error)};
+ phase='playing';syncControls();
+ try{window.speechSynthesis.speak(u);status('audioStatus','휴대폰 음성 재생 준비 중…')}
+ catch(e){finishAudio(seq,false,'휴대폰 음성 시작 실패: '+friendly(e))}
 }
-$('voiceMode').onclick=()=>{voiceMode=voiceMode==='api'?'phone':'api';$('voiceMode').textContent='음성: '+(voiceMode==='api'?'API':'H.P');clearAudio();status('audioStatus','출력 방식: '+(voiceMode==='api'?'OpenAI API':'휴대폰 기본 음성'))};
-async function speak(text,lang){if(voiceMode==='phone'){speakPhone(text,lang);return}const seq=speechSeq;status('audioStatus','자연스러운 음성 생성 중…');try{
- const blob=await request('audio/speech',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'gpt-4o-mini-tts',voice:'coral',input:text,response_format:'mp3',instructions:lang==='vi'?'Speak naturally and clearly in Vietnamese, using a gentle southern Vietnamese conversational accent if possible. Do not add any words.':'Speak naturally and clearly in Korean with a friendly, professional conversational tone. Do not add any words.'})},35000,'blob');
- if(seq!==speechSeq||voiceMode!=='api')return;clearAudio();audioURL=URL.createObjectURL(blob);const p=$('player');p.src=audioURL;
- try{await p.play();status('audioStatus','음성 재생 중… (번역 결과를 누르면 다시 듣기)')}catch{status('audioStatus','자동 재생이 차단됐습니다. 번역 결과를 눌러 재생하세요.')}
- }catch(e){status('audioStatus','음성 생성 실패: '+friendly(e)+' (번역문은 유지됩니다.)')}
-}
-$('player').onended=()=>status('audioStatus','재생 완료 (번역 결과를 누르면 다시 듣기)');
-$('result').onclick=()=>{if(!last)return;if(voiceMode==='phone'){speakPhone(last,language);return}const p=$('player');if(p.src){p.currentTime=0;p.play().catch(()=>{})}else{speak(last,language)}};
-$('translate').onclick=async()=>{const text=$('source').value.trim();if(!text){status('translateStatus','원문을 입력하세요.');return}
- try{apiKey();setBusy(true);status('translateStatus','번역 중…');
- const j=await request('responses',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'gpt-4.1-mini',instructions:RULES,input:text})},30000);
- countUsage(j);const output=(j.output||[]).flatMap(x=>x.content||[]).filter(x=>x.type==='output_text').map(x=>x.text).join('\n').trim();if(!output)throw Error('번역 결과가 비어 있습니다.');
- last=output;language=/[가-힣]/.test(output)?'ko':'vi';$('result').textContent=output;$('source').value='';status('translateStatus','번역 완료');setBusy(false);await speak(output,language);
- }catch(e){status('translateStatus','번역 오류: '+friendly(e))}finally{setBusy(false)}
+$('voiceMode').onclick=()=>{
+ if(phase==='playing'||phase==='preparing'||phase==='translating')stopTranslation();
+ voiceMode=voiceMode==='api'?'phone':'api';
+ $('voiceMode').textContent='음성: '+(voiceMode==='api'?'API':'H.P');
+ status('audioStatus','출력 방식: '+(voiceMode==='api'?'OpenAI API':'휴대폰 기본 음성'));
 };
-$('clear').onclick=()=>{if(recording||busy)return;recordedBlob=null;chunks=[];clearAudio();$('source').value='';$('result').textContent='';last='';status('micStatus','');status('translateStatus','');status('audioStatus','');refreshRetry()};
+async function speak(text,lang,job){
+ if(job!==jobId)return;
+ if(voiceMode==='phone'){speakPhone(text,lang);return}
+ phase='preparing';syncControls();status('audioStatus','자연스러운 음성 생성 중…');
+ const seq=speechSeq;
+ try{
+ const blob=await request('audio/speech',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'gpt-4o-mini-tts',voice:'coral',input:text,response_format:'mp3',instructions:lang==='vi'?'Speak naturally and clearly in Vietnamese, using a gentle southern Vietnamese conversational accent if possible. Do not add any words.':'Speak naturally and clearly in Korean with a friendly, professional conversational tone. Do not add any words.'})},35000,'blob');
+ if(job!==jobId||seq!==speechSeq||voiceMode!=='api')return;
+ clearAudio();const activeSeq=speechSeq;audioURL=URL.createObjectURL(blob);const p=$('player');p.src=audioURL;
+ p.onended=()=>finishAudio(activeSeq,true,'재생 완료 (번역 결과를 누르면 다시 듣기)');
+ p.onerror=()=>finishAudio(activeSeq,false,'음성 재생 오류 — 원문을 유지합니다.');
+ phase='playing';syncControls();
+ try{await p.play();if(activeSeq===speechSeq)status('audioStatus','음성 재생 중…')}
+ catch{finishAudio(activeSeq,false,'자동 재생이 차단됐습니다. 번역 결과를 눌러 재생하세요.')}
+ }catch(e){if(job===jobId){phase='idle';syncControls();status('audioStatus','음성 생성 실패: '+friendly(e)+' (원문 유지)')}}
+}
+$('result').onclick=()=>{
+ if(!last||phase!=='idle')return;
+ const job=++jobId;
+ speak(last,language,job);
+};
+async function startTranslation(){
+ if(phase!=='idle'||recording)return;
+ const text=$('source').value.trim();
+ if(!text){status('translateStatus','원문을 입력하세요.');return}
+ const job=++jobId;
+ try{
+ apiKey();phase='translating';syncControls();status('translateStatus','번역 중…');
+ const j=await request('responses',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'gpt-4.1-mini',instructions:RULES,input:text})},30000);
+ if(job!==jobId)return;
+ countUsage(j);
+ const output=(j.output||[]).flatMap(x=>x.content||[]).filter(x=>x.type==='output_text').map(x=>x.text).join('\\n').trim();
+ if(!output)throw Error('번역 결과가 비어 있습니다.');
+ last=output;language=/[가-힣]/.test(output)?'ko':'vi';$('result').textContent=output;
+ status('translateStatus','번역 완료');await speak(output,language,job);
+ }catch(e){
+ if(job===jobId){phase='idle';syncControls();status('translateStatus','번역 오류: '+friendly(e))}
+ }
+}
+$('translate').onclick=()=>{
+ if(['translating','preparing','playing'].includes(phase)){stopTranslation();return}
+ startTranslation();
+};
+$('auto').onclick=()=>{
+ autoTranslate=!autoTranslate;
+ $('auto').innerHTML='자동번역<br><span>'+(autoTranslate?'ON':'OFF')+'</span>';
+ $('auto').classList.toggle('auto-on',autoTranslate);
+ $('auto').classList.toggle('auto-off',!autoTranslate);
+ $('auto').setAttribute('aria-pressed',String(autoTranslate));
+};
+$('clear').onclick=()=>{
+ if(recording||phase!=='idle')return;
+ jobId++;recordedBlob=null;chunks=[];clearAudio();$('source').value='';$('result').textContent='';last='';
+ status('micStatus','');status('translateStatus','');status('audioStatus','');syncControls();
+};
+syncControls();
 </script></body></html>
